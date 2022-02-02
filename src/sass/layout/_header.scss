@@ -2,9 +2,12 @@
 @import "../variables/breakpoints";
 
 .header {
+	height: 650px;
 	position: relative;
-	background: url("/./src/images/mobile/image-hero.jpg");
 	padding: 20px 14px;
+	background: url("/./src/images/mobile/image-hero.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
 
 	.logo {
 		&--header {
@@ -73,5 +76,14 @@
 			text-decoration: none;
 			transition-duration: 0.25s;
 		}
+	}
+
+	.main-heading {
+		position: absolute;
+		top: 50%;
+		right: 50%;
+		transform: translate(50%, -50%);
+		border: 3px solid colors.$white;
+		padding: 20px;
 	}
 }
