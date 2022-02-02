@@ -33,3 +33,32 @@ ul > li {
 		}
 	}
 }
+
+.gallery {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	&-item-wrapper {
+		position: relative;
+
+		.hero-img {
+			img {
+				width: 327px;
+				height: 120px;
+				filter: brightness(0.5);
+			}
+		}
+
+		.hero-title {
+			width: 100px;
+			height: 48px;
+			position: absolute;
+			top: 27px;
+			left: 23px;
+		}
+
+		.hero-title--vr {
+			width: 123px;
+		}
+	}
+}
