@@ -7,3 +7,10 @@ ul > li {
 		width: 100%;
 	}
 }
+
+.section {
+	&-wrapper {
+		padding: 80px 20px;
+		text-align: center;
+	}
+}

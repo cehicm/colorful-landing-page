@@ -4,15 +4,16 @@
 .header {
 	height: 650px;
 	position: relative;
-	padding: 20px 14px;
+	padding: 40px 25px;
 	background: url("/./src/images/mobile/image-hero.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 
 	.logo {
 		&--header {
-			z-index: 2;
 			position: absolute;
+
+			z-index: 2;
 			img {
 				width: 144px;
 			}
@@ -26,8 +27,8 @@
 	.menu {
 		&__btn {
 			position: fixed;
-			top: 36px;
-			right: 22px;
+			top: 49px;
+			right: 26px;
 			width: 26px;
 			height: 26px;
 			cursor: pointer;
@@ -78,13 +79,12 @@
 			transition-duration: 0.25s;
 		}
 	}
-
-	.main-heading {
-		position: absolute;
-		top: 50%;
-		right: 50%;
-		transform: translate(50%, -50%);
-		border: 3px solid colors.$white;
-		padding: 20px;
-	}
+}
+.main-heading {
+	position: absolute;
+	top: 50%;
+	right: 50%;
+	transform: translate(50%, -50%);
+	border: 3px solid colors.$white;
+	padding: 20px;
 }
