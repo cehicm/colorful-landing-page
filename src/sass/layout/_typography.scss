@@ -1,3 +1,29 @@
-body {
-  font-family: "Josefin Sans", sans-serif;
+@use "../variables/colors" as colors;
+h1,
+h2,
+h3 {
+	font-family: "Josefin Sans", sans-serif;
+	font-weight: 300;
+}
+
+.main-heading {
+	font-size: 40px;
+	line-height: 38px;
+	color: colors.$white;
+}
+
+.section-main__heading,
+.section-gallery__heading {
+	font-size: 32px;
+	font-weight: 300;
+	line-height: 32px;
+	color: colors.$black;
+}
+
+.nav-list-item {
+	font-family: "Josefin Sans", sans-serif;
+	font-size: 24px;
+	font-weight: 300;
+	line-height: 25px;
+	color: colors.$white;
 }
