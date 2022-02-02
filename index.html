@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 		<link rel="stylesheet" href="/dist/css/styles.css" />
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -79,7 +80,7 @@
 						<div class="gallery-item-wrapper">
 							<picture class="hero-img">
 								<source
-									srcset="//src/images/desktop/image-night-arcade.jpg"
+									srcset="/src/images/desktop/image-night-arcade.jpg"
 									media="(min-width: 1024px)"
 								/>
 								<source
@@ -206,6 +207,45 @@
 						</div>
 					</div>
 				</div>
+
+				<button class="btn--see-all">SEE ALL</button>
+
+				<div class="section-gallery section--hidden">
+					<div class="gallery">
+						<div class="gallery-item-wrapper">
+							<picture class="hero-img">
+								<source
+									srcset="/src/images/desktop/nature.jpeg"
+									media="(min-width: 1024px)"
+								/>
+								<source
+									srcset="/src/images/mobile/nature.jpeg"
+									media="(min-width:320px)"
+								/>
+								<img
+									src="/src/images/mobile/nature.jpeg"
+									alt="Image of nature"
+								/>
+							</picture>
+							<h3 class="hero-title">EXCITMENT</h3>
+						</div>
+
+						<div class="gallery-item-wrapper">
+							<picture class="hero-img">
+								<source
+									srcset="/src/images/desktop/scenery.jpeg"
+									media="(min-width: 1024px)"
+								/>
+								<source
+									srcset="/src/images/mobile/scenery.jpeg"
+									media="(min-width:320px)"
+								/>
+								<img src="/src/images/mobile/scenery.jpeg" alt="Image of car" />
+							</picture>
+							<h3 class="hero-title">COOL SUNSET</h3>
+						</div>
+					</div>
+				</div>
 			</div>
 		</section>
 
@@ -214,16 +254,25 @@
 				<div class="logo logo--footer">
 					<img src="/src/images/logo.svg" alt="Loopstudios logo" />
 				</div>
-
-				<ul>
-					<li><a href="#">About</a></li>
-					<li><a href="#">Careers</a></li>
-					<li><a href="">Events</a></li>
-					<li><a href="">Products</a></li>
-					<li><a href="">Support</a></li>
+				<ul class="footer-menu">
+					<li class="footer-menu__item"><a href="#">About</a></li>
+					<li class="footer-menu__item"><a href="#">Careers</a></li>
+					<li class="footer-menu__item"><a href="">Events</a></li>
+					<li class="footer-menu__item"><a href="">Products</a></li>
+					<li class="footer-menu__item"><a href="">Support</a></li>
 				</ul>
 			</div>
-			<div class="footer-right"></div>
+			<div class="footer-right">
+				<div class="footer-social">
+					<img src="/src/images/icon-facebook.svg" alt="Facebook logo" />
+					<img src="/src/images/icon-twitter.svg" alt="Twitter logo" />
+					<img src="/src/images/icon-pinterest.svg" alt="Pinterest logo" />
+					<img src="/src/images/icon-instagram.svg" alt="Instagram logo" />
+				</div>
+				<div class="footer-copyright">
+					&#169; 2021 Loopstudios. All rights reserved.
+				</div>
+			</div>
 		</footer>
 		<script src="/dist/scripts/app.js"></script>
 	</body>

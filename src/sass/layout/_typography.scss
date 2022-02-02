@@ -22,14 +22,28 @@ h3 {
 	color: colors.$black;
 }
 
+.section-main__text,
+.footer-menu__item > a,
+.footer-copyright {
+	font-family: "Alata", sans-serif;
+	font-size: 15px;
+	font-weight: 400;
+}
+
+.menu__item,
+.hero-title {
+	font-family: "Josefin Sans", sans-serif;
+	font-size: 24px;
+	font-weight: 300;
+	line-height: 24px;
+	text-align: left;
+	color: colors.$white;
+}
+
 .menu__item {
 	@include sc-breakpoint(1024) {
 		text-transform: capitalize;
 	}
-	font-family: "Josefin Sans", sans-serif;
-	font-size: 24px;
-	font-weight: 300;
-	color: colors.$white;
 	text-transform: uppercase;
 
 	&:hover {
@@ -43,20 +57,27 @@ h3 {
 	}
 
 	&-main__text {
-		font-family: "Alata";
-		font-size: 15px;
-		font-weight: 400;
-		opacity: 49.94%;
+		opacity: 0.5;
 	}
 
 	.gallery {
 		.hero-title {
-			font-family: "Josefin Sans";
-			font-size: 24px;
-			font-weight: 300;
-			line-height: 24px;
 			text-align: left;
-			color: colors.$white;
 		}
+	}
+
+	.btn--see-all {
+		font-family: "Alata";
+		font-size: 14px;
+		line-height: 14px;
+		letter-spacing: 5px;
+		text-align: left;
+	}
+}
+
+.footer {
+	&-menu__item a,
+	&-copyright {
+		color: colors.$white;
 	}
 }
