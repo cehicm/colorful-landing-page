@@ -18,6 +18,84 @@
   src: local(""), url("/dist/fonts/alata-v7-latin/alata-v7-latin-regular.eot?#iefix") format("embedded-opentype"), url("/dist/fonts/alata-v7-latin/alata-v7-latin-regular.woff2") format("woff2"), url("/dist/fonts/alata-v7-latin/alata-v7-latin-regular.woff") format("woff"), url("/dist/fonts/alata-v7-latin/alata-v7-latin-regular.ttf") format("truetype"), url("/dist/fonts/alata-v7-latin/alata-v7-latin-regular.svg#Alata") format("svg");
   /* Legacy iOS */
 }
+#menu__toggle:checked + .menu__btn span {
+  transform: rotate(45deg);
+}
+#menu__toggle:checked + .menu__btn span::before {
+  top: 0;
+  transform: rotate(0deg);
+}
+#menu__toggle:checked + .menu__btn span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+  left: 0;
+}
+
+.header {
+  position: relative;
+  background: url("/./src/images/mobile/image-hero.jpg");
+  padding: 20px 14px;
+}
+.header .logo--header {
+  z-index: 2;
+  position: absolute;
+}
+.header .logo--header img {
+  width: 144px;
+}
+.header #menu__toggle {
+  display: none;
+}
+.header .menu__btn {
+  position: fixed;
+  top: 36px;
+  right: 22px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+}
+.header .menu__btn span,
+.header .menu__btn span::before,
+.header .menu__btn span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  transition-duration: 0.25s;
+}
+.header .menu__btn span::before {
+  content: "";
+  top: -8px;
+}
+.header .menu__btn span::after {
+  content: "";
+  top: 8px;
+}
+.header .menu__box {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  background-color: #000000;
+  transition-duration: 0.25s;
+}
+.header .menu__item {
+  display: block;
+  padding: 12px 24px;
+  color: #ffffff;
+  text-decoration: none;
+  transition-duration: 0.25s;
+}
+
 h1,
 h2,
 h3 {
@@ -39,10 +117,23 @@ h3 {
   color: #000000;
 }
 
-.nav-list-item {
+.menu__item {
   font-family: "Josefin Sans", sans-serif;
   font-size: 24px;
   font-weight: 300;
-  line-height: 25px;
   color: #ffffff;
+  text-transform: uppercase;
+}
+@media (min-width: 1024px) {
+  .menu__item {
+    text-transform: capitalize;
+  }
+}
+
+ul > li {
+  list-style-type: none;
+}
+
+.hero-img img {
+  width: 100%;
 }
