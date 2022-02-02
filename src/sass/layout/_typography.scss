@@ -31,4 +31,21 @@ h3 {
 	font-weight: 300;
 	color: colors.$white;
 	text-transform: uppercase;
+
+	&:hover {
+		opacity: 0.4;
+	}
+}
+
+.section {
+	&-wrapper {
+		text-align: center;
+	}
+
+	&-main__text {
+		font-family: "Alata";
+		font-size: 15px;
+		font-weight: 400;
+		opacity: 49.94%;
+	}
 }

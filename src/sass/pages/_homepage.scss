@@ -1,3 +1,9 @@
+@use "../variables/colors" as colors;
+@import "../variables/breakpoints";
+
+body {
+	background-color: colors.$light-gray;
+}
 ul > li {
 	list-style-type: none;
 }
@@ -12,5 +18,18 @@ ul > li {
 	&-wrapper {
 		padding: 80px 20px;
 		text-align: center;
+	}
+
+	&-main {
+		margin-bottom: 50px;
+
+		&__heading {
+			margin-bottom: 0;
+			margin-top: 40px;
+		}
+		&__text {
+			padding: 20px;
+			margin: 0;
+		}
 	}
 }
