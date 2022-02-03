@@ -68,6 +68,7 @@ body {
   .header {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
+    padding: 65px 73px;
   }
 }
 .header .nav {
@@ -84,6 +85,11 @@ body {
 }
 .header .logo--header img {
   width: 144px;
+}
+@media (min-width: 1024px) {
+  .header .logo--header img {
+    width: 190px;
+  }
 }
 .header #menu__toggle {
   display: none;
@@ -167,6 +173,12 @@ body {
   border: 3px solid #ffffff;
   padding: 20px;
 }
+@media (min-width: 1024px) {
+  .main-heading {
+    padding-right: 99px;
+    right: 63%;
+  }
+}
 
 .footer {
   display: flex;
@@ -201,6 +213,13 @@ h3 {
   font-weight: 200;
   line-height: 38px;
   color: #ffffff;
+}
+@media (min-width: 768px) {
+  .main-heading {
+    font-size: 72px;
+    font-weight: 300;
+    line-height: 70px;
+  }
 }
 
 .section-main__heading,
@@ -244,6 +263,12 @@ h3 {
 
 .section-wrapper {
   text-align: center;
+}
+@media (min-width: 1024px) {
+  .section-main__heading {
+    font-size: 48px;
+    line-height: 48px;
+  }
 }
 .section-main__text {
   opacity: 0.5;
@@ -297,16 +322,51 @@ a {
   text-decoration: none;
 }
 
+.section {
+  max-width: 90vw;
+  margin: 0 auto;
+}
 .section-wrapper {
   padding: 80px 20px 40px 20px;
   text-align: center;
 }
+@media (min-width: 1024px) {
+  .section-wrapper {
+    padding: 120px 104px;
+  }
+}
 .section-main {
   margin-bottom: 50px;
+}
+@media (min-width: 1024px) {
+  .section-main {
+    position: relative;
+    display: flex;
+  }
+}
+@media (min-width: 1024px) {
+  .section-main__text-content {
+    position: absolute;
+    width: 551px;
+    height: 300px;
+    right: 0px;
+    padding-left: 70px;
+    text-align: left;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background: #f2f2f2;
+  }
 }
 .section-main__heading {
   margin-bottom: 0;
   margin-top: 40px;
+}
+@media (min-width: 1024px) {
+  .section-main__heading {
+    width: 445px;
+  }
 }
 .section-main__text {
   padding: 20px;
@@ -317,8 +377,15 @@ a {
     padding: 50px;
   }
 }
+@media (min-width: 1024px) {
+  .section-main__text {
+    padding: 0;
+    padding-top: 20px;
+  }
+}
 .section-main__img img {
   width: 100%;
+  filter: contrast(1.2);
 }
 @media (min-width: 1024px) {
   .section-gallery {

@@ -13,15 +13,47 @@ a {
 }
 
 .section {
+	max-width: 90vw;
+	margin: 0 auto;
 	&-wrapper {
+		@include sc-breakpoint(1024) {
+			padding: 120px 104px;
+		}
 		padding: 80px 20px 40px 20px;
 		text-align: center;
 	}
 
 	&-main {
 		margin-bottom: 50px;
+		@include sc-breakpoint(1024) {
+			position: relative;
+			display: flex;
+		}
+
+		&__text-content {
+			@include sc-breakpoint(1024) {
+				position: absolute;
+				width: 551px;
+				height: 300px;
+				right: 0px;
+
+				padding-left: 70px;
+
+				text-align: left;
+
+				bottom: 0;
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-end;
+
+				background: colors.$light-gray;
+			}
+		}
 
 		&__heading {
+			@include sc-breakpoint(1024) {
+				width: 445px;
+			}
 			margin-bottom: 0;
 			margin-top: 40px;
 		}
@@ -29,7 +61,10 @@ a {
 			@include sc-breakpoint(768) {
 				padding: 50px;
 			}
-
+			@include sc-breakpoint(1024) {
+				padding: 0;
+				padding-top: 20px;
+			}
 			padding: 20px;
 			margin: 0;
 		}
@@ -37,6 +72,7 @@ a {
 		&__img {
 			img {
 				width: 100%;
+				filter: contrast(1.2);
 			}
 		}
 	}

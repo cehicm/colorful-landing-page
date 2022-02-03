@@ -8,6 +8,11 @@ h3 {
 }
 
 .main-heading {
+	@include sc-breakpoint(768) {
+		font-size: 72px;
+		font-weight: 300;
+		line-height: 70px;
+	}
 	font-size: 40px;
 	font-weight: 200;
 	line-height: 38px;
@@ -55,6 +60,14 @@ h3 {
 .section {
 	&-wrapper {
 		text-align: center;
+	}
+
+	&-main__heading {
+		@include sc-breakpoint(1024) {
+			font-size: 48px;
+			// font-weight: 300;
+			line-height: 48px;
+		}
 	}
 
 	&-main__text {

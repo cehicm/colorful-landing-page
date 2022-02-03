@@ -5,6 +5,7 @@
 	@include sc-breakpoint(1024) {
 		display: grid;
 		grid-template-columns: repeat(6, 1fr);
+		padding: 65px 73px;
 	}
 	height: 650px;
 	position: relative;
@@ -26,6 +27,9 @@
 			position: absolute;
 			z-index: 2;
 			img {
+				@include sc-breakpoint(1024) {
+					width: 190px;
+				}
 				width: 144px;
 			}
 		}
@@ -116,4 +120,9 @@
 	transform: translate(50%, -50%);
 	border: 3px solid colors.$white;
 	padding: 20px;
+
+	@include sc-breakpoint(1024) {
+		padding-right: 99px;
+		right: 63%;
+	}
 }
