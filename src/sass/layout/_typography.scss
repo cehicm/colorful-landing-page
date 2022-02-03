@@ -43,12 +43,13 @@ h3 {
 .menu__item {
 	@include sc-breakpoint(1024) {
 		text-transform: capitalize;
+
+		&:hover {
+			text-decoration: underline;
+			text-underline-offset: 10px;
+		}
 	}
 	text-transform: uppercase;
-
-	&:hover {
-		opacity: 0.4;
-	}
 }
 
 .section {

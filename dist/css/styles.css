@@ -64,9 +64,23 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
+@media (min-width: 1024px) {
+  .header {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+.header .nav {
+  grid-column: 3/7;
+}
 .header .logo--header {
   position: absolute;
   z-index: 2;
+}
+@media (min-width: 1024px) {
+  .header .logo--header {
+    position: relative;
+  }
 }
 .header .logo--header img {
   width: 144px;
@@ -82,6 +96,11 @@ body {
   height: 26px;
   cursor: pointer;
   z-index: 2;
+}
+@media (min-width: 1024px) {
+  .header .menu__btn {
+    display: none;
+  }
 }
 .header .menu__btn span,
 .header .menu__btn span::before,
@@ -116,12 +135,28 @@ body {
   transition-duration: 0.25s;
   z-index: 1;
 }
+@media (min-width: 1024px) {
+  .header .menu__box {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    left: auto;
+    padding: 0;
+    margin: 0 auto;
+    background: none;
+  }
+}
 .header .menu__item {
   display: block;
   padding: 12px 24px;
   color: #ffffff;
   text-decoration: none;
   transition-duration: 0.25s;
+}
+@media (min-width: 1024px) {
+  .header .menu__item {
+    padding: 0;
+  }
 }
 
 .main-heading {
@@ -201,9 +236,10 @@ h3 {
   .menu__item {
     text-transform: capitalize;
   }
-}
-.menu__item:hover {
-  opacity: 0.4;
+  .menu__item:hover {
+    text-decoration: underline;
+    text-underline-offset: 10px;
+  }
 }
 
 .section-wrapper {

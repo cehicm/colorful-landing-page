@@ -2,6 +2,10 @@
 @import "../variables/breakpoints";
 
 .header {
+	@include sc-breakpoint(1024) {
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+	}
 	height: 650px;
 	position: relative;
 	padding: 40px 25px;
@@ -9,8 +13,16 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 
+	.nav {
+		grid-column: 3/7;
+	}
+
 	.logo {
 		&--header {
+			@include sc-breakpoint(1024) {
+				position: relative;
+			}
+
 			position: absolute;
 			z-index: 2;
 			img {
@@ -25,6 +37,9 @@
 
 	.menu {
 		&__btn {
+			@include sc-breakpoint(1024) {
+				display: none;
+			}
 			position: absolute;
 			top: 49px;
 			right: 26px;
@@ -57,6 +72,16 @@
 		}
 
 		&__box {
+			@include sc-breakpoint(1024) {
+				position: relative;
+				display: flex;
+				justify-content: space-between;
+				left: auto;
+				padding: 0;
+				margin: 0 auto;
+				background: none;
+			}
+
 			display: block;
 			position: fixed;
 			top: 0;
@@ -72,6 +97,10 @@
 		}
 
 		&__item {
+			@include sc-breakpoint(1024) {
+				padding: 0;
+			}
+
 			display: block;
 			padding: 12px 24px;
 			color: colors.$white;
