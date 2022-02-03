@@ -63,12 +63,27 @@ body {
   background: url("/./src/images/mobile/image-hero.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  padding-bottom: 0;
 }
 @media (min-width: 1024px) {
   .header {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    padding: 65px 73px;
+    grid-template-rows: repeat(4, 1fr);
+    padding-top: 60px;
+    background: url("/./src/images/desktop/image-hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .header::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 1;
   }
 }
 .header .nav {
@@ -172,11 +187,23 @@ body {
   transform: translate(50%, -50%);
   border: 3px solid #ffffff;
   padding: 20px;
+  z-index: 2;
 }
 @media (min-width: 1024px) {
   .main-heading {
-    padding-right: 99px;
-    right: 63%;
+    width: 62%;
+    top: auto;
+    right: auto;
+    grid-column: 1;
+    grid-row: 2;
+    padding: 40px;
+    transform: initial;
+  }
+}
+@media (min-width: 1820px) {
+  .main-heading {
+    width: 27%;
+    padding: 55px;
   }
 }
 
@@ -322,17 +349,19 @@ a {
   text-decoration: none;
 }
 
-.section {
-  max-width: 90vw;
-  margin: 0 auto;
-}
 .section-wrapper {
   padding: 80px 20px 40px 20px;
+  margin: 0 auto;
   text-align: center;
 }
 @media (min-width: 1024px) {
   .section-wrapper {
     padding: 120px 104px;
+  }
+}
+@media (min-width: 1820px) {
+  .section-wrapper {
+    max-width: 90vw;
   }
 }
 .section-main {

@@ -13,13 +13,15 @@ a {
 }
 
 .section {
-	max-width: 90vw;
-	margin: 0 auto;
 	&-wrapper {
 		@include sc-breakpoint(1024) {
 			padding: 120px 104px;
 		}
+		@include sc-breakpoint(1820) {
+			max-width: 90vw;
+		}
 		padding: 80px 20px 40px 20px;
+		margin: 0 auto;
 		text-align: center;
 	}
 
