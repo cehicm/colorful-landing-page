@@ -57,21 +57,35 @@ h3 {
 	}
 
 	&-main__text {
+		@include sc-breakpoint(768) {
+			font-size: 19px;
+		}
 		opacity: 0.5;
 	}
 
-	.gallery {
-		.hero-title {
-			text-align: left;
+	.hero-title {
+		@include sc-breakpoint(768) {
+			font-size: 46px;
+			line-height: 51px;
 		}
+
+		@include sc-breakpoint(1024) {
+			font-size: 32px;
+			line-height: 32px;
+		}
+
+		text-align: left;
 	}
 
 	.btn--see-all {
+		@include sc-breakpoint(768) {
+			font-size: 21px;
+		}
 		font-family: "Alata";
 		font-size: 14px;
 		line-height: 14px;
 		letter-spacing: 5px;
-		text-align: left;
+		text-align: center;
 	}
 }
 

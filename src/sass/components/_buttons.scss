@@ -1,3 +1,9 @@
+@import "../variables/breakpoints";
+
 .btn--see-all {
 	padding: 10px 20px;
+
+	@include sc-breakpoint(768) {
+		padding: 20px 40px;
+	}
 }
