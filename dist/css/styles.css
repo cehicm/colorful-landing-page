@@ -57,6 +57,13 @@ body {
   background: rgba(0, 0, 0, 0.5);
   opacity: 0.5;
 }
+.gallery-item-wrapper:hover {
+  background-blend-mode: soft-light;
+  background-color: #c0c0c0;
+}
+.gallery-item-wrapper:hover .hero-title {
+  color: #000000;
+}
 @media (min-width: 768px) {
   .gallery-item-wrapper {
     height: 250px;
@@ -116,6 +123,7 @@ body {
   }
 }
 .item--borealis {
+  background-image: url("/src/images/mobile/image-pocket-borealis.jpg");
   background-image: url("/src/images/mobile/image-pocket-borealis.jpg");
 }
 @media (min-width: 1024px) {
@@ -241,9 +249,33 @@ body {
     width: 235px;
   }
 }
+
 .section--hidden {
   grid-row: 3;
   display: none;
+}
+.section--hidden .gallery-item-wrapper .item--nature--earth {
+  background-image: url("/src/images/mobile/nature.jpeg");
+}
+@media (min-width: 1024px) {
+  .section--hidden .gallery-item-wrapper .item--nature--earth {
+    background-image: url("/src/images/desktop/nature.jpeg");
+  }
+}
+.section--hidden .gallery-item-wrapper .item--sunset {
+  background-image: url("/src/images/mobile/scenery.jpeg");
+}
+@media (min-width: 1024px) {
+  .section--hidden .gallery-item-wrapper .item--sunset {
+    background-image: url("/src/images/desktop/scenery.jpeg");
+  }
+}
+
+.btn--see-all {
+  margin: 30px 0;
+}
+.btn--see-all:hover {
+  filter: invert(1);
 }
 
 #menu__toggle:checked + .menu__btn span {
@@ -558,11 +590,11 @@ a {
 }
 
 .section {
-  margin: 40px 0;
+  margin: 10px 15px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .section {
-    margin: 50px;
+    margin: 20px 40px;
   }
 }
 @media (min-width: 1400px) {
@@ -575,7 +607,12 @@ a {
   text-align: center;
 }
 .section-main {
-  margin-bottom: 50px;
+  margin: 40px 0;
+}
+@media (min-width: 1024px) {
+  .section-main {
+    margin: 50px;
+  }
 }
 @media (min-width: 1024px) {
   .section-main {
@@ -594,7 +631,7 @@ a {
     justify-content: center;
     width: 293px;
     height: 541px;
-    right: 0px;
+    right: 0;
     bottom: 0;
     padding-left: 30px;
     padding-right: 100px;
@@ -603,14 +640,14 @@ a {
 }
 @media (min-width: 1400px) {
   .section-main__text-content {
-    width: 551px;
+    width: 400px;
     height: 300px;
     padding-left: 70px;
   }
 }
 .section-main__heading {
   margin-bottom: 0;
-  margin-top: 40px;
+  padding-top: 40px;
 }
 @media (min-width: 1024px) {
   .section-main__heading {
@@ -635,14 +672,4 @@ a {
 .section-main__img img {
   width: 100%;
   filter: contrast(1.2);
-}
-
-.btn--see-all {
-  margin: 30px 0;
-}
-
-@media (min-width: 768px) {
-  .section-main-img img {
-    width: 100%;
-  }
 }
