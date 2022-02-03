@@ -109,10 +109,12 @@
 
 .section {
 	&-gallery {
+		margin: 40px 0;
+
 		@include sc-breakpoint(1024) {
 			display: grid;
 			grid-template-columns: repeat(12, minmax(0, 1fr));
-
+			margin: 100px 0;
 			&__heading {
 				grid-row: 1;
 				justify-self: baseline;
@@ -126,7 +128,8 @@
 		}
 	}
 
-	.gallery {
+	.gallery,
+	.gallery--loaded {
 		display: flex;
 		flex-direction: column;
 		gap: 20px;
@@ -213,25 +216,29 @@
 .section--hidden {
 	grid-row: 3;
 	display: none;
+	grid-column: 1/-1;
 
-	.gallery-item-wrapper {
-		.item {
-			&--nature {
-				&--earth {
-					background-image: url("/src/images/mobile/nature.jpeg");
+	.gallery--loaded {
+		display: grid;
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+		grid-column: 1/-1;
+		margin-top: 20px;
+	}
 
-					@include sc-breakpoint(1024) {
-						background-image: url("/src/images/desktop/nature.jpeg");
-					}
-				}
+	.item {
+		&--nature {
+			background-image: url("/src/images/mobile/nature.jpeg");
+
+			@include sc-breakpoint(1024) {
+				background-image: url("/src/images/desktop/nature.jpeg");
 			}
+		}
 
-			&--sunset {
-				background-image: url("/src/images/mobile/scenery.jpeg");
+		&--sunset {
+			background-image: url("/src/images/mobile/scenery.jpeg");
 
-				@include sc-breakpoint(1024) {
-					background-image: url("/src/images/desktop/scenery.jpeg");
-				}
+			@include sc-breakpoint(1024) {
+				background-image: url("/src/images/desktop/scenery.jpeg");
 			}
 		}
 	}
