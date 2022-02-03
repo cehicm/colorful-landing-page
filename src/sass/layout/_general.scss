@@ -1,0 +1,12 @@
+@use "../variables/colors" as colors;
+
+body {
+	background-color: colors.$light-gray;
+}
+ul > li {
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+}

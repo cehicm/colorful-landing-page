@@ -7,16 +7,21 @@ h3 {
 	font-family: "Josefin Sans", sans-serif;
 }
 
+.section-gallery__heading {
+	white-space: nowrap;
+}
+
 .main-heading {
+	font-size: 40px;
+	font-weight: 200;
+	line-height: 38px;
+	color: colors.$white;
+
 	@include sc-breakpoint(768) {
 		font-size: 72px;
 		font-weight: 300;
 		line-height: 70px;
 	}
-	font-size: 40px;
-	font-weight: 200;
-	line-height: 38px;
-	color: colors.$white;
 }
 
 .section-main__heading,
@@ -25,6 +30,11 @@ h3 {
 	font-weight: 300;
 	line-height: 32px;
 	color: colors.$black;
+
+	@include sc-breakpoint(1820) {
+		font-size: 72px;
+		line-height: 72px;
+	}
 }
 
 .section-main__text,
@@ -46,6 +56,8 @@ h3 {
 }
 
 .menu__item {
+	text-transform: uppercase;
+
 	@include sc-breakpoint(1024) {
 		text-transform: capitalize;
 
@@ -54,7 +66,6 @@ h3 {
 			text-underline-offset: 10px;
 		}
 	}
-	text-transform: uppercase;
 }
 
 .section {
@@ -67,16 +78,28 @@ h3 {
 			font-size: 48px;
 			line-height: 48px;
 		}
+
+		@include sc-breakpoint(1820) {
+			font-size: 72px;
+			line-height: 72px;
+		}
 	}
 
 	&-main__text {
+		opacity: 0.5;
+
 		@include sc-breakpoint(768) {
 			font-size: 19px;
 		}
-		opacity: 0.5;
+
+		@include sc-breakpoint(1820) {
+			font-size: 25px;
+		}
 	}
 
 	.hero-title {
+		text-align: left;
+
 		@include sc-breakpoint(768) {
 			font-size: 46px;
 			line-height: 51px;
@@ -91,18 +114,22 @@ h3 {
 			}
 		}
 
-		text-align: left;
+		@include sc-breakpoint(1820) {
+			font-size: 63px;
+			line-height: 63px;
+		}
 	}
 
 	.btn--see-all {
-		@include sc-breakpoint(768) {
-			font-size: 21px;
-		}
 		font-family: "Alata";
 		font-size: 14px;
 		line-height: 14px;
 		letter-spacing: 5px;
 		text-align: center;
+
+		@include sc-breakpoint(768) {
+			font-size: 21px;
+		}
 	}
 }
 

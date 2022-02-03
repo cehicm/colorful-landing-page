@@ -2,11 +2,19 @@
 @import "../variables/breakpoints";
 
 .header {
+	height: 650px;
+	position: relative;
+	padding: 40px 25px;
+	background: url("/./src/images/mobile/image-hero.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding-bottom: 0;
+
 	@include sc-breakpoint(1024) {
 		display: grid;
 		grid-template-columns: repeat(6, 1fr);
 		grid-template-rows: repeat(4, 1fr);
-		padding-top: 60px;
+		padding: 40px;
 		background: url("/./src/images/desktop/image-hero.jpg");
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -22,31 +30,36 @@
 			opacity: 1;
 		}
 	}
-	height: 650px;
-	position: relative;
-	padding: 40px 25px;
-	background: url("/./src/images/mobile/image-hero.jpg");
-	background-size: cover;
-	background-repeat: no-repeat;
-	padding-bottom: 0;
-
+	@include sc-breakpoint(1400) {
+		padding: 111px;
+	}
 	.nav {
 		grid-column: 3/7;
+
+		@include sc-breakpoint(1024) {
+			grid-column: 4/7;
+		}
+
+		@include sc-breakpoint(1400) {
+			grid-column: 5/7;
+		}
 	}
 
 	.logo {
 		&--header {
+			position: absolute;
+			z-index: 3;
+
 			@include sc-breakpoint(1024) {
 				position: relative;
 			}
 
-			position: absolute;
-			z-index: 2;
 			img {
+				width: 144px;
+
 				@include sc-breakpoint(1024) {
 					width: 190px;
 				}
-				width: 144px;
 			}
 		}
 	}
@@ -57,16 +70,17 @@
 
 	.menu {
 		&__btn {
-			@include sc-breakpoint(1024) {
-				display: none;
-			}
 			position: absolute;
 			top: 49px;
 			right: 26px;
 			width: 26px;
 			height: 26px;
 			cursor: pointer;
-			z-index: 2;
+			z-index: 3;
+
+			@include sc-breakpoint(1024) {
+				display: none;
+			}
 
 			span,
 			span::before,
@@ -92,16 +106,6 @@
 		}
 
 		&__box {
-			@include sc-breakpoint(1024) {
-				position: relative;
-				display: flex;
-				justify-content: space-between;
-				left: auto;
-				padding: 0;
-				margin: 0 auto;
-				background: none;
-			}
-
 			display: block;
 			position: fixed;
 			top: 0;
@@ -113,19 +117,30 @@
 			list-style: none;
 			background-color: colors.$black;
 			transition-duration: 0.25s;
-			z-index: 1;
+			z-index: 2;
+
+			@include sc-breakpoint(1024) {
+				position: relative;
+				display: flex;
+				gap: 20px;
+				justify-content: space-between;
+				left: auto;
+				padding: 0;
+				margin: 0 auto;
+				background: none;
+			}
 		}
 
 		&__item {
-			@include sc-breakpoint(1024) {
-				padding: 0;
-			}
-
 			display: block;
 			padding: 12px 24px;
 			color: colors.$white;
 			text-decoration: none;
 			transition-duration: 0.25s;
+
+			@include sc-breakpoint(1024) {
+				padding: 0;
+			}
 		}
 	}
 }
@@ -134,12 +149,26 @@
 	top: 50%;
 	right: 50%;
 	transform: translate(50%, -50%);
+	max-width: 500px;
 	border: 3px solid colors.$white;
 	padding: 20px;
-	z-index: 2;
+	z-index: 1;
+
+	&:hover {
+		animation-name: contrast;
+		animation-duration: 4s;
+	}
+
+	@keyframes contrast {
+		from {
+			filter: contrast(0.1);
+		}
+		to {
+			filter: contrast(1);
+		}
+	}
 
 	@include sc-breakpoint(1024) {
-		width: 62%;
 		top: auto;
 		right: auto;
 		grid-column: 1;
@@ -149,7 +178,6 @@
 	}
 
 	@include sc-breakpoint(1820) {
-		width: 27%;
 		padding: 55px;
 	}
 }
