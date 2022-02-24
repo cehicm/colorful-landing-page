@@ -408,7 +408,6 @@ a {
   }
 }
 .header .menu__box {
-  display: none;
   position: absolute;
   top: -15px;
   left: 0;
@@ -419,6 +418,11 @@ a {
   background-color: #000000;
   transition-duration: 0.25s;
   z-index: 2;
+  overflow: hidden;
+  transform: translateX(-100%);
+}
+.header .menu__box--show {
+  transform: translateX(0%);
 }
 @media (min-width: 1024px) {
   .header .menu__box {

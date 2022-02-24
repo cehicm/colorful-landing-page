@@ -12,7 +12,9 @@
 
 (function () {
 	const menuBtn = $(".menu__btn");
+	const menu = menuBtn.siblings(".menu__box");
+
 	$(menuBtn).on("click", function () {
-		menuBtn.nextAll().slideToggle("slow");
+		menu.toggleClass("menu__box--show");
 	});
 })(jQuery);
