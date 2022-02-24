@@ -9,3 +9,10 @@
 		}
 	});
 })(jQuery);
+
+(function () {
+	const menuBtn = $(".menu__btn");
+	$(menuBtn).on("click", function () {
+		menuBtn.nextAll().slideToggle("slow");
+	});
+})(jQuery);

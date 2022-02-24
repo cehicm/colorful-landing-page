@@ -1,25 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-		<link rel="stylesheet" href="/dist/css/styles.css" />
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Loopstudios</title>
-	</head>
-	<body>
-		<header class="header">
-			<div class="logo logo--header">
-				<a href="#">
-					<img src="/src/images/logo.svg" alt="Loopstudios logo"
-				/></a>
-			</div>
+
+<head>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<link rel="stylesheet" href="/dist/css/styles.css" />
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Loopstudios</title>
+</head>
+
+<body>
+	<header class="header">
+		<div class="header__nav">
+
 			<nav class="nav">
-				<input id="menu__toggle" type="checkbox" />
-				<label class="menu__btn" for="menu__toggle">
-					<span></span>
-				</label>
+				<div class="logo logo--header">
+					<a href="#">
+						<img src="/src/images/logo.svg" alt="Loopstudios logo" /></a>
+				</div>
+				<svg class="menu__btn" width="24" height="16" viewBox="0 0 24 16" fill="none"
+					xmlns="http://www.w3.org/2000/svg">
+					<g id="Group">
+						<rect id="Rectangle" width="24" height="2" fill="white" />
+						<rect id="Rectangle Copy" y="7" width="24" height="2" fill="white" />
+						<rect id="Rectangle Copy 2" y="14" width="24" height="2" fill="white" />
+					</g>
+				</svg>
 				<ul class="menu__box">
 					<li><a class="menu__item" href="#">About</a></li>
 					<li><a class="menu__item" href="#">Careers</a></li>
@@ -28,124 +35,118 @@
 					<li><a class="menu__item" href="#">Support</a></li>
 				</ul>
 			</nav>
-			<h1 class="main-heading">IMMERSIVE EXPERIENCES THAT DELIVER</h1>
-		</header>
-		<section class="section">
-			<div class="section-wrapper">
-				<div class="section-main">
-					<picture class="section-main__img">
-						<source
-							srcset="src/images/desktop/image-interactive.jpg"
-							media="(min-width: 1024px)"
-						/>
-						<source
-							srcset="/src/images/mobile/image-interactive.jpg"
-							media="(min-width:320px)"
-						/>
-						<img
-							src="/src/images/mobile/image-interactive.jpg"
-							alt="Man wearing VR goggles"
-						/>
-					</picture>
-					<div class="section-main__text-content">
-						<h2 class="section-main__heading">THE LEADER IN INTERACTIVE VR</h2>
-						<p class="section-main__text">
-							Founded in 2011, Loopstudios has been producing world-class
-							virtual reality projects for some of the best companies around the
-							globe. Our award-winning creations have transformed businesses
-							through digital experiences that bind to their brand.
-						</p>
+		</div>
+
+		<h1 class="main-heading">IMMERSIVE EXPERIENCES THAT DELIVER</h1>
+	</header>
+	<section class="section">
+		<div class="section-wrapper">
+			<div class="section-main">
+				<picture class="section-main__img">
+					<source srcset="src/images/desktop/image-interactive.jpg" media="(min-width: 1024px)" />
+					<source srcset="/src/images/mobile/image-interactive.jpg" media="(min-width:320px)" />
+					<img src="/src/images/mobile/image-interactive.jpg" alt="Man wearing VR goggles" />
+				</picture>
+				<div class="section-main__text-content">
+					<h2 class="section-main__heading">THE LEADER IN INTERACTIVE VR</h2>
+					<p class="section-main__text">
+						Founded in 2011, Loopstudios has been producing world-class
+						virtual reality projects for some of the best companies around the
+						globe. Our award-winning creations have transformed businesses
+						through digital experiences that bind to their brand.
+					</p>
+				</div>
+			</div>
+
+			<div class="section-gallery">
+				<h3 class="section-gallery__heading">OUR CREATIONS</h3>
+				<div class="gallery">
+					<div class="gallery-item-wrapper item--earth">
+						<h3 class="hero-title">DEEP EARTH</h3>
+					</div>
+
+					<div class="gallery-item-wrapper item--arcade">
+						<h3 class="hero-title">NIGHT ARCADE</h3>
+					</div>
+
+					<div class="gallery-item-wrapper item--soccer">
+						<h3 class="hero-title">SOCCER TEAM VR</h3>
+					</div>
+
+					<div class="gallery-item-wrapper item--grid">
+						<h3 class="hero-title">THE GRID</h3>
+					</div>
+
+					<div class="gallery-item-wrapper item--vr">
+						<h3 class="hero-title hero-title--vr">FROM UP ABOVE VR</h3>
+					</div>
+
+					<div class="gallery-item-wrapper item--borealis">
+						<h3 class="hero-title">POCKET BOREALIS</h3>
+					</div>
+
+					<div class="gallery-item-wrapper item--curiosity">
+						<h3 class="hero-title">THE CURIOSITY</h3>
+					</div>
+
+					<div class="gallery-item-wrapper item--fisheye">
+						<h3 class="hero-title">MAKE IT FISHEYE</h3>
 					</div>
 				</div>
 
-				<div class="section-gallery">
-					<h3 class="section-gallery__heading">OUR CREATIONS</h3>
-					<div class="gallery">
-						<div class="gallery-item-wrapper item--earth">
-							<h3 class="hero-title">DEEP EARTH</h3>
+				<button class="btn--see-all">SEE ALL</button>
+
+				<div class="section--hidden">
+					<div class="gallery--loaded">
+						<div class="gallery-item-wrapper item--nature">
+							<h3 class="hero-title">EXCITMENT</h3>
 						</div>
 
-						<div class="gallery-item-wrapper item--arcade">
-							<h3 class="hero-title">NIGHT ARCADE</h3>
-						</div>
-
-						<div class="gallery-item-wrapper item--soccer">
-							<h3 class="hero-title">SOCCER TEAM VR</h3>
-						</div>
-
-						<div class="gallery-item-wrapper item--grid">
-							<h3 class="hero-title">THE GRID</h3>
-						</div>
-
-						<div class="gallery-item-wrapper item--vr">
-							<h3 class="hero-title hero-title--vr">FROM UP ABOVE VR</h3>
-						</div>
-
-						<div class="gallery-item-wrapper item--borealis">
-							<h3 class="hero-title">POCKET BOREALIS</h3>
-						</div>
-
-						<div class="gallery-item-wrapper item--curiosity">
-							<h3 class="hero-title">THE CURIOSITY</h3>
-						</div>
-
-						<div class="gallery-item-wrapper item--fisheye">
-							<h3 class="hero-title">MAKE IT FISHEYE</h3>
-						</div>
-					</div>
-
-					<button class="btn--see-all">SEE ALL</button>
-
-					<div class="section--hidden">
-						<div class="gallery--loaded">
-							<div class="gallery-item-wrapper item--nature">
-								<h3 class="hero-title">EXCITMENT</h3>
-							</div>
-
-							<div class="gallery-item-wrapper item--sunset">
-								<h3 class="hero-title">COOL SUNSET</h3>
-							</div>
+						<div class="gallery-item-wrapper item--sunset">
+							<h3 class="hero-title">COOL SUNSET</h3>
 						</div>
 					</div>
 				</div>
 			</div>
-		</section>
+		</div>
+	</section>
 
-		<footer class="footer">
-			<div class="footer-left">
-				<div class="logo logo--footer">
-					<img src="/src/images/logo.svg" alt="Loopstudios logo" />
-				</div>
-				<ul class="footer-menu">
-					<li class="footer-menu__item"><a href="#">About</a></li>
-					<li class="footer-menu__item"><a href="#">Careers</a></li>
-					<li class="footer-menu__item"><a href="">Events</a></li>
-					<li class="footer-menu__item"><a href="">Products</a></li>
-					<li class="footer-menu__item"><a href="">Support</a></li>
-				</ul>
+	<footer class="footer">
+		<div class="footer-left">
+			<div class="logo logo--footer">
+				<img src="/src/images/logo.svg" alt="Loopstudios logo" />
 			</div>
-			<div class="footer-right">
-				<div class="footer-social">
-					<a href="https://www.facebook.com/">
-						<img src="/src/images/icon-facebook.svg" alt="Facebook logo" />
-					</a>
-					<a href="https://twitter.com/?lang=en">
-						<img src="/src/images/icon-twitter.svg" alt="Twitter logo" />
-					</a>
-					<a href="https://www.pinterest.com/">
-						<img src="/src/images/icon-pinterest.svg" alt="Pinterest logo" />
-					</a>
+			<ul class="footer-menu">
+				<li class="footer-menu__item"><a href="#">About</a></li>
+				<li class="footer-menu__item"><a href="#">Careers</a></li>
+				<li class="footer-menu__item"><a href="">Events</a></li>
+				<li class="footer-menu__item"><a href="">Products</a></li>
+				<li class="footer-menu__item"><a href="">Support</a></li>
+			</ul>
+		</div>
+		<div class="footer-right">
+			<div class="footer-social">
+				<a href="https://www.facebook.com/">
+					<img src="/src/images/icon-facebook.svg" alt="Facebook logo" />
+				</a>
+				<a href="https://twitter.com/?lang=en">
+					<img src="/src/images/icon-twitter.svg" alt="Twitter logo" />
+				</a>
+				<a href="https://www.pinterest.com/">
+					<img src="/src/images/icon-pinterest.svg" alt="Pinterest logo" />
+				</a>
 
-					<a href="https://www.instagram.com/?hl=en">
-						<img src="/src/images/icon-instagram.svg" alt="Instagram logo" />
-					</a>
-				</div>
-
-				<div class="footer-copyright">
-					&#169; 2021 Loopstudios. All rights reserved.
-				</div>
+				<a href="https://www.instagram.com/?hl=en">
+					<img src="/src/images/icon-instagram.svg" alt="Instagram logo" />
+				</a>
 			</div>
-		</footer>
-		<script src="/dist/scripts/app.js"></script>
-	</body>
+
+			<div class="footer-copyright">
+				&#169; 2021 Loopstudios. All rights reserved.
+			</div>
+		</div>
+	</footer>
+	<script src="/dist/scripts/app.js"></script>
+</body>
+
 </html>

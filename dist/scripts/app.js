@@ -1,1 +1,1 @@
-"use strict";jQuery,$(".btn--see-all").on("click",(function(){$(this).nextAll().slideToggle("slow"),"SEE ALL"===$(this).text()?$(this).text("SEE LESS"):"SEE LESS"===$(this).text()&&$(this).text("SEE ALL")}));
+"use strict";jQuery,$(".btn--see-all").on("click",(function(){$(this).nextAll().slideToggle("slow"),"SEE ALL"===$(this).text()?$(this).text("SEE LESS"):"SEE LESS"===$(this).text()&&$(this).text("SEE ALL")})),function(){var t=$(".menu__btn");$(t).on("click",(function(){t.nextAll().slideToggle("slow")}))}(jQuery);
