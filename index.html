@@ -12,13 +12,11 @@
 
 <body>
 	<header class="header">
-		<div class="header__nav">
-
-			<nav class="nav">
-				<div class="logo logo--header">
-					<a href="#">
-						<img src="/src/images/logo.svg" alt="Loopstudios logo" /></a>
-				</div>
+		<div class="nav__wrapper">
+			<nav class="nav__upper">
+				<a class="logo logo--header" href="#">
+					<img src="/src/images/logo.svg" alt="Loopstudios logo" />
+				</a>
 				<svg class="menu__btn" width="24" height="16" viewBox="0 0 24 16" fill="none"
 					xmlns="http://www.w3.org/2000/svg">
 					<g id="Group">
@@ -27,7 +25,14 @@
 						<rect id="Rectangle Copy 2" y="14" width="24" height="2" fill="white" />
 					</g>
 				</svg>
-				<ul class="menu__box">
+				<svg class="menu__btn--close" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+					<path
+						d="M17.778.808l1.414 1.414L11.414 10l7.778 7.778-1.414 1.414L10 11.414l-7.778 7.778-1.414-1.414L8.586 10 .808 2.222 2.222.808 10 8.586 17.778.808z"
+						fill="#FFF" fill-rule="evenodd" />
+				</svg>
+			</nav>
+			<nav class="nav__menu">
+				<ul class="nav__menu__list">
 					<li><a class="menu__item" href="#">About</a></li>
 					<li><a class="menu__item" href="#">Careers</a></li>
 					<li><a class="menu__item" href="#">Events</a></li>
@@ -36,9 +41,11 @@
 				</ul>
 			</nav>
 		</div>
-
-		<h1 class="main-heading">IMMERSIVE EXPERIENCES THAT DELIVER</h1>
+		<div class="header__wrapper">
+			<h1 class="main-heading">IMMERSIVE EXPERIENCES THAT DELIVER</h1>
+		</div>
 	</header>
+
 	<section class="section">
 		<div class="section-wrapper">
 			<div class="section-main">
@@ -144,8 +151,10 @@
 			<div class="footer-copyright">
 				&#169; 2021 Loopstudios. All rights reserved.
 			</div>
-		</div>
+
 	</footer>
+	</div>
+
 	<script src="/dist/scripts/app.js"></script>
 </body>
 

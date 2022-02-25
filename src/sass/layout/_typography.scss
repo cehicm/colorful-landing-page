@@ -62,8 +62,16 @@ h3 {
 		text-transform: capitalize;
 
 		&:hover {
-			text-decoration: underline;
-			text-underline-offset: 10px;
+			&::after {
+				content: "";
+				height: 3px;
+				background: colors.$white;
+				width: 39px;
+				z-index: 22;
+				display: block;
+				margin: 0 auto;
+				margin-top: 8px;
+			}
 		}
 	}
 }

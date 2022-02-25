@@ -1,7 +1,62 @@
+@use "../variables/colors" as colors;
 @import "../variables/breakpoints";
 
 .nav {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
+	&__wrapper {
+		position: relative;
+	}
+
+	&__upper {
+		position: absolute;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 20px;
+		z-index: 3;
+
+		@include sc-breakpoint(1024) {
+			left: 0;
+			width: auto;
+		}
+	}
+
+	&__menu {
+		position: fixed;
+		top: 0;
+		width: 100%;
+		min-height: 100vh;
+		height: 100vh;
+		display: flex;
+		align-items: center;
+		transform: translateX(-100%);
+		background: colors.$black;
+		transition: transform 0.3s ease;
+		z-index: 2;
+
+		@include sc-breakpoint(1024) {
+			right: 0;
+			position: absolute;
+			width: auto;
+			height: auto;
+			min-height: auto;
+			display: block;
+			transform: translateX(0);
+			background: none;
+		}
+
+		&__list {
+			display: flex;
+			flex-direction: column;
+			gap: 35px;
+
+			@include sc-breakpoint(1024) {
+				flex-direction: row;
+			}
+		}
+	}
+}
+
+.show-menu {
+	transform: translateX(0%);
 }

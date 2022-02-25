@@ -2,18 +2,24 @@
 @import "../variables/breakpoints";
 
 .header {
-	height: 650px;
+	height: 70vh;
 	position: relative;
-	background: url("/./src/images/mobile/image-hero.jpg");
+	padding-bottom: 0;
+	background-image: url("/./src/images/mobile/image-hero.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
-	padding-bottom: 0;
+
+	&__wrapper {
+		position: relative;
+		@include sc-breakpoint(1024) {
+			z-index: 2;
+		}
+	}
 
 	@include sc-breakpoint(1024) {
 		padding: 40px;
-		background: url("/./src/images/desktop/image-hero.jpg");
-		background-repeat: no-repeat;
-		background-size: cover;
+		height: auto;
+		background-image: url("/src/images/desktop/image-hero.jpg");
 
 		&::after {
 			content: "";
@@ -26,129 +32,27 @@
 			opacity: 1;
 		}
 	}
-	@include sc-breakpoint(1400) {
-		padding: 60px 111px;
-	}
 
-	&__nav {
-		padding: 20px;
+	.main-heading {
+		position: absolute;
+		width: 90%;
+		display: flex;
+		justify-content: center;
+		padding: 9%;
+		margin-top: 200px;
+		border: 3px solid colors.$white;
 
 		@include sc-breakpoint(1024) {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
+			position: relative;
+			width: 60%;
+			padding: 5%;
+			margin: 300px 0;
 		}
 	}
 
-	.logo {
-		&--header {
-			z-index: 3;
-
-			@include sc-breakpoint(1024) {
-				position: relative;
-			}
-
-			img {
-				width: 144px;
-
-				@include sc-breakpoint(1024) {
-					width: 190px;
-				}
-			}
+	.menu__btn {
+		@include sc-breakpoint(1024) {
+			display: none;
 		}
-	}
-
-	.menu {
-		&__btn {
-			align-self: flex-end;
-
-			width: 26px;
-			height: 26px;
-			cursor: pointer;
-			z-index: 3;
-
-			@include sc-breakpoint(1024) {
-				display: none;
-			}
-		}
-
-		&__box {
-			position: absolute;
-			top: -15px;
-			left: 0;
-			width: 100vw;
-			height: 100vh;
-			padding: 160px 0;
-			list-style: none;
-			background-color: colors.$black;
-			transition-duration: 0.25s;
-			z-index: 2;
-			overflow: hidden;
-			transform: translateX(-100%);
-
-			&--show {
-				transform: translateX(0%);
-			}
-
-			@include sc-breakpoint(1024) {
-				width: auto;
-				height: auto;
-				display: block;
-				position: relative;
-				display: flex;
-				gap: 20px;
-				justify-content: space-between;
-				left: auto;
-				padding: 0;
-				margin: 0 auto;
-				background: none;
-			}
-		}
-
-		&__item {
-			display: block;
-			padding: 12px 24px;
-			color: colors.$white;
-			text-decoration: none;
-			transition-duration: 0.25s;
-
-			@include sc-breakpoint(1024) {
-				padding: 0;
-			}
-		}
-	}
-}
-.main-heading {
-	position: absolute;
-	top: 50%;
-	right: 50%;
-	transform: translate(50%, -50%);
-	border: 3px solid colors.$white;
-	padding: 20px;
-	z-index: 1;
-
-	&:hover {
-		background: colors.$header-gradient;
-		-webkit-background-clip: text;
-		background-clip: text;
-		-webkit-text-fill-color: transparent;
-		border-image: colors.$header-gradient;
-		border-image-slice: 1;
-	}
-
-	@include sc-breakpoint(1024) {
-		position: inherit;
-		max-width: 50%;
-		top: auto;
-		right: auto;
-		grid-column: 1;
-		grid-row: 2;
-		padding: 40px;
-		transform: initial;
-		margin: 100px 0;
-	}
-
-	@include sc-breakpoint(1820) {
-		padding: 55px;
 	}
 }
