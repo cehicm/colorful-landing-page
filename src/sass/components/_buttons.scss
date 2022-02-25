@@ -1,7 +1,9 @@
+@use "../variables/colors" as colors;
 @import "../variables/breakpoints";
 
 .btn--see-all {
 	padding: 10px 20px;
+	border: 1px solid colors.$black;
 
 	@include sc-breakpoint(768) {
 		padding: 20px 40px;

@@ -132,10 +132,6 @@ h3 {
 		line-height: 14px;
 		letter-spacing: 5px;
 		text-align: center;
-
-		@include sc-breakpoint(768) {
-			font-size: 21px;
-		}
 	}
 }
 

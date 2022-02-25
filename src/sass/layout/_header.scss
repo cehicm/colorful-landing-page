@@ -4,19 +4,14 @@
 .header {
 	height: 70vh;
 	position: relative;
-	padding-bottom: 0;
+	padding: 20px 0;
 	background-image: url("/./src/images/mobile/image-hero.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 
-	&__wrapper {
-		position: relative;
-		@include sc-breakpoint(1024) {
-			z-index: 2;
-		}
-	}
-
 	@include sc-breakpoint(1024) {
+		display: flex;
+		flex-direction: column;
 		padding: 40px;
 		height: auto;
 		background-image: url("/src/images/desktop/image-hero.jpg");
@@ -34,23 +29,25 @@
 	}
 
 	.main-heading {
-		position: absolute;
-		width: 90%;
-		right: 50%;
-		top: 50%;
 		display: flex;
-		justify-content: center;
-		padding: 9%;
-		margin-top: 200px;
+		align-items: center;
+		padding: 20px;
 		border: 3px solid colors.$white;
-		margin: 0 auto;
-		transform: translate(50%, 100%);
+		z-index: 2;
+		max-width: 650px;
+
+		@media screen and(min-width: 320px) and (max-width: 768px) {
+			margin-left: 10px;
+			width: 90%;
+			height: 30%;
+			transform: translateY(80%);
+		}
 
 		@include sc-breakpoint(1024) {
 			position: relative;
-			width: 60%;
-			padding: 5%;
-			margin: 300px 0;
+			width: 70%;
+			padding: 40px;
+			margin: 150px 0;
 		}
 	}
 
