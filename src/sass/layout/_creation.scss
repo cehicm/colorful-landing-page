@@ -1,0 +1,255 @@
+@use "../variables/colors" as colors;
+@import "../variables/breakpoints";
+
+.gallery__section {
+	&__wrapper {
+		margin: 40px 0;
+
+		@include sc-breakpoint(1024) {
+			display: grid;
+			grid-template-columns: repeat(12, minmax(0, 1fr));
+			align-items: center;
+			margin-top: 10%;
+
+			.btn--see-all {
+				grid-row: 1;
+				grid-column: 10/13;
+			}
+		}
+	}
+	&__heading {
+		@include sc-breakpoint(1024) {
+			grid-row: 1;
+			justify-self: baseline;
+			grid-column: 1/5;
+		}
+	}
+
+	.gallery,
+	.gallery--loaded {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+
+		@include sc-breakpoint(1024) {
+			display: grid;
+			grid-template-columns: repeat(4, minmax(0, 1fr));
+			grid-column: 1/-1;
+		}
+
+		@include sc-breakpoint(1400) {
+			grid-gap: 28px;
+		}
+
+		&-item-wrapper {
+			position: relative;
+
+			.hero-img {
+				img {
+					width: 100%;
+					height: 120px;
+					filter: brightness(0.5);
+
+					@include sc-breakpoint(768) {
+						height: 263px;
+					}
+
+					@include sc-breakpoint(1024) {
+						height: 425px;
+						width: 215px;
+						&::hover {
+							content: "";
+							position: absolute;
+							width: 100%;
+							height: 100%;
+							top: 0;
+							left: 0;
+							background: rgba(0, 0, 0, 0.5);
+							opacity: 1;
+						}
+					}
+					@include sc-breakpoint(1400) {
+						height: 518px;
+						width: 318px;
+					}
+				}
+			}
+
+			.hero-title {
+				position: absolute;
+				width: 51%;
+				height: 48px;
+				top: 51px;
+				left: 23px;
+				margin: 0;
+
+				@include sc-breakpoint(768) {
+					top: 80px;
+				}
+
+				@include sc-breakpoint(1024) {
+					left: 25px;
+					top: 275px;
+				}
+
+				@include sc-breakpoint(1400) {
+					top: 419px;
+				}
+			}
+
+			.hero-title--vr {
+				width: 199px;
+
+				@include sc-breakpoint(768) {
+					width: 235px;
+				}
+			}
+		}
+	}
+
+	.gallery-item-wrapper {
+		width: 100%;
+		height: 123px;
+		background-size: cover;
+		background-repeat: no-repeat;
+
+		@include sc-breakpoint(768) {
+			height: 250px;
+		}
+
+		@include sc-breakpoint(1024) {
+			height: 450px;
+		}
+
+		@include sc-breakpoint(1400) {
+			height: 538px;
+		}
+
+		@include sc-breakpoint(1820) {
+			height: 1000px;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background: rgba(0, 0, 0, 0.5);
+			opacity: 0.5;
+		}
+
+		&:hover {
+			background-blend-mode: soft-light;
+			background-color: colors.$hover-gray;
+			transition: ease-in-out 1s;
+
+			.hero-title {
+				color: colors.$black;
+			}
+		}
+	}
+
+	.item {
+		&--earth {
+			background-image: url("/src/images/mobile/image-deep-earth.jpg");
+
+			@include sc-breakpoint(1024) {
+				background-image: url("/src/images/desktop/image-deep-earth.jpg");
+			}
+		}
+
+		&--arcade {
+			background-image: url("/src/images/mobile/image-night-arcade.jpg");
+
+			@include sc-breakpoint(1024) {
+				background-image: url("/src/images/desktop/image-night-arcade.jpg");
+			}
+		}
+
+		&--soccer {
+			background-image: url("/src/images/mobile/image-soccer-team.jpg");
+
+			@include sc-breakpoint(1024) {
+				background-image: url("/src/images/desktop/image-soccer-team.jpg");
+			}
+		}
+
+		&--grid {
+			background-image: url("/src/images/mobile/image-grid.jpg");
+
+			@include sc-breakpoint(1024) {
+				background-image: url("/src/images/desktop/image-grid.jpg");
+			}
+		}
+		&--vr {
+			background-image: url("/src/images/mobile/image-from-above.jpg");
+
+			@include sc-breakpoint(1024) {
+				background-image: url("/src/images/desktop/image-from-above.jpg");
+			}
+		}
+
+		&--borealis {
+			background-image: url("/src/images/mobile/image-pocket-borealis.jpg");
+			background-image: url("/src/images/mobile/image-pocket-borealis.jpg");
+			@include sc-breakpoint(1024) {
+				background-image: url("/src/images/desktop/image-pocket-borealis.jpg");
+			}
+		}
+
+		&--curiosity {
+			background-image: url("/src/images/mobile/image-curiosity.jpg");
+
+			@include sc-breakpoint(1024) {
+				background-image: url("/src/images/desktop/image-curiosity.jpg");
+			}
+		}
+
+		&--fisheye {
+			background-image: url("/src/images/mobile/image-fisheye.jpg");
+
+			@include sc-breakpoint(1024) {
+				background-image: url("/src/images/desktop/image-fisheye.jpg");
+			}
+		}
+	}
+}
+
+.section--hidden {
+	grid-row: 3;
+	display: none;
+	grid-column: 1/-1;
+
+	.gallery--loaded {
+		grid-column: 1/-1;
+		margin-top: 20px;
+	}
+
+	.item {
+		&--nature {
+			background-image: url("/src/images/mobile/nature.jpeg");
+
+			@include sc-breakpoint(1024) {
+				background-image: url("/src/images/desktop/nature.jpeg");
+			}
+		}
+
+		&--sunset {
+			background-image: url("/src/images/mobile/scenery.jpeg");
+
+			@include sc-breakpoint(1024) {
+				background-image: url("/src/images/desktop/scenery.jpeg");
+			}
+		}
+	}
+}
+
+.btn--see-all {
+	margin: 30px 0;
+
+	&:hover {
+		filter: invert(1);
+	}
+}
