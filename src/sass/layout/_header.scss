@@ -36,11 +36,15 @@
 	.main-heading {
 		position: absolute;
 		width: 90%;
+		right: 50%;
+		top: 50%;
 		display: flex;
 		justify-content: center;
 		padding: 9%;
 		margin-top: 200px;
 		border: 3px solid colors.$white;
+		margin: 0 auto;
+		transform: translate(50%, 100%);
 
 		@include sc-breakpoint(1024) {
 			position: relative;
