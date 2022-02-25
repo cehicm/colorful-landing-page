@@ -501,12 +501,6 @@ h3 {
     transform: translate(10%, 200%);
   }
 }
-@media (min-width: 1400px) {
-  .gallery__section .gallery-item-wrapper .hero-title,
-.gallery__section .gallery--loaded-item-wrapper .hero-title {
-    transform: translate(10%, 250%);
-  }
-}
 .gallery__section .gallery-item-wrapper .hero-title-span,
 .gallery__section .gallery--loaded-item-wrapper .hero-title-span {
   display: block;

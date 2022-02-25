@@ -87,10 +87,6 @@
 					transform: translate(10%, 200%);
 				}
 
-				@include sc-breakpoint(1400) {
-					transform: translate(10%, 250%);
-				}
-
 				&-span {
 					display: block;
 				}
