@@ -88,8 +88,8 @@ a {
     position: absolute;
     width: 100%;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: flex-start;
     padding: 20px;
   }
 }
@@ -112,8 +112,6 @@ a {
     width: 100%;
     min-height: 100vh;
     height: 100vh;
-    display: flex;
-    align-items: center;
     background: #000000;
     transition: transform 0.3s ease;
   }
