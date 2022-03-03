@@ -337,7 +337,7 @@ h3 {
     z-index: 22;
     display: block;
     margin: 0 auto;
-    margin-top: 8px;
+    transform: translateY(12px);
   }
 }
 

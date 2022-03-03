@@ -1,143 +1,129 @@
 @use "../variables/colors" as colors;
 @import "../variables/breakpoints";
-
 h1,
 h2,
 h3 {
-	font-family: "Josefin Sans", sans-serif;
+    font-family: "Josefin Sans", sans-serif;
 }
 
 .section-gallery__heading {
-	white-space: nowrap;
+    white-space: nowrap;
 }
 
 .main-heading {
-	font-size: 40px;
-	font-weight: 200;
-	line-height: 38px;
-	color: colors.$white;
-
-	@include sc-breakpoint(768) {
-		font-size: 72px;
-		font-weight: 300;
-		line-height: 70px;
-	}
+    font-size: 40px;
+    font-weight: 200;
+    line-height: 38px;
+    color: colors.$white;
+    @include sc-breakpoint(768) {
+        font-size: 72px;
+        font-weight: 300;
+        line-height: 70px;
+    }
 }
 
 .leader__heading,
 .gallery__section__heading {
-	font-size: 32px;
-	font-weight: 300;
-	line-height: 32px;
-	color: colors.$black;
-
-	@include sc-breakpoint(1820) {
-		font-size: 72px;
-		line-height: 72px;
-	}
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 32px;
+    color: colors.$black;
+    @include sc-breakpoint(1820) {
+        font-size: 72px;
+        line-height: 72px;
+    }
 }
 
 .leader__text,
-.footer-menu__item > a,
+.footer-menu__item>a,
 .footer-copyright {
-	font-family: "Alata", sans-serif;
-	font-size: 15px;
-	font-weight: 400;
+    font-family: "Alata", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
 }
 
 .menu__item,
 .hero-title {
-	font-family: "Josefin Sans", sans-serif;
-	font-size: 24px;
-	font-weight: 300;
-	line-height: 24px;
-	text-align: left;
-	color: colors.$white;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 24px;
+    text-align: left;
+    color: colors.$white;
 }
 
 .menu__item {
-	text-transform: uppercase;
-
-	@include sc-breakpoint(1024) {
-		text-transform: capitalize;
-
-		&:hover {
-			&::after {
-				content: "";
-				height: 3px;
-				background: colors.$white;
-				width: 39px;
-				z-index: 22;
-				display: block;
-				margin: 0 auto;
-				margin-top: 8px;
-			}
-		}
-	}
+    text-transform: uppercase;
+    @include sc-breakpoint(1024) {
+        text-transform: capitalize;
+        &:hover {
+            &::after {
+                content: "";
+                height: 3px;
+                background: colors.$white;
+                width: 39px;
+                z-index: 22;
+                display: block;
+                margin: 0 auto;
+                transform: translateY(12px);
+            }
+        }
+    }
 }
 
 .leader {
-	&__heading {
-		@include sc-breakpoint(1024) {
-			font-size: 48px;
-			line-height: 48px;
-		}
-
-		@include sc-breakpoint(1820) {
-			font-size: 72px;
-			line-height: 72px;
-		}
-	}
-
-	&__text {
-		opacity: 0.5;
-
-		@include sc-breakpoint(1820) {
-			font-size: 25px;
-		}
-	}
+    &__heading {
+        @include sc-breakpoint(1024) {
+            font-size: 48px;
+            line-height: 48px;
+        }
+        @include sc-breakpoint(1820) {
+            font-size: 72px;
+            line-height: 72px;
+        }
+    }
+    &__text {
+        opacity: 0.5;
+        @include sc-breakpoint(1820) {
+            font-size: 25px;
+        }
+    }
 }
 
 .section {
-	&-wrapper {
-		text-align: center;
-	}
-
-	.hero-title {
-		text-align: left;
-
-		@include sc-breakpoint(768) {
-			font-size: 46px;
-			line-height: 51px;
-		}
-
-		@include sc-breakpoint(1024) {
-			font-size: 32px;
-			line-height: 32px;
-
-			&:hover {
-				color: colors.$black;
-			}
-		}
-
-		@include sc-breakpoint(1820) {
-			font-size: 63px;
-			line-height: 63px;
-		}
-	}
-
-	.btn--see-all {
-		font-family: "Alata";
-		font-size: 14px;
-		line-height: 14px;
-		letter-spacing: 5px;
-		text-align: center;
-	}
+    &-wrapper {
+        text-align: center;
+    }
+    .hero-title {
+        text-align: left;
+        @include sc-breakpoint(768) {
+            font-size: 46px;
+            line-height: 51px;
+        }
+        @include sc-breakpoint(1024) {
+            font-size: 32px;
+            line-height: 32px;
+            &:hover {
+                color: colors.$black;
+            }
+        }
+        @include sc-breakpoint(1820) {
+            font-size: 63px;
+            line-height: 63px;
+        }
+    }
+    .btn--see-all {
+        font-family: "Alata";
+        font-size: 14px;
+        line-height: 14px;
+        letter-spacing: 5px;
+        text-align: center;
+    }
 }
 
 .footer {
-	&-menu__item a,
-	&-copyright {
-		color: colors.$white;
-	}
+    &-menu__item a,
+    &-copyright {
+        color: colors.$white;
+    }
 }
