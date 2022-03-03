@@ -1,25 +1,29 @@
 @use "../variables/colors" as colors;
-
 body {
-	background-color: colors.$light-gray;
+    background-color: colors.$light-gray;
 }
 
 * {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-ul > li {
-	list-style-type: none;
+ul>li {
+    list-style-type: none;
 }
 
 a {
-	text-decoration: none;
+    text-decoration: none;
 }
 
 .display-none {
-	display: none;
+    display: none;
 }
 
 .display-block {
-	display: block;
+    display: block;
+}
+
+.body-menu-open {
+    overflow: hidden;
+    position: fixed;
 }

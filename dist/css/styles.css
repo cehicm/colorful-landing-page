@@ -70,6 +70,11 @@ a {
   display: block;
 }
 
+.body-menu-open {
+  overflow: hidden;
+  position: fixed;
+}
+
 .nav__wrapper {
   position: relative;
 }
@@ -182,7 +187,6 @@ a {
   .header .main-heading {
     margin-left: 10px;
     width: 90%;
-    height: 30%;
     transform: translateY(80%);
   }
 }
